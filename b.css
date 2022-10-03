@@ -1,0 +1,268 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:cursive;
+}
+
+/*Navigation Bar*/
+#nav-bar{
+    display:flex;
+    align-items:center;
+    /*background-color:rgba(0, 0, 0, 0.4);*/ /*Nav bar background color with opacity to color only this is other technique*/
+
+}
+#nav-bar ul{
+    display:flex;
+    list-style-type: none;
+}
+#nav-bar ul li a{
+    color:white;
+    padding:0.625rem;
+    text-decoration: none;
+    font-size:1.25rem;
+    margin:0.3125rem;
+    }
+#nav-bar ul li a:hover{
+    color:black;
+    transition-duration: 1s;
+}
+/*Nav bar background color with opacity to color only*/
+#nav-bar::before{
+    content:"";
+    background-color: black;
+    position:absolute;     
+    height:100%;
+    width:100%;
+    opacity: 0.3;
+    z-index:-1;
+}
+#nav-bar{
+    position:relative;        
+}
+
+/*Navigation Bar:Logo and img*/
+#logo{
+    margin:0.3125rem;
+}
+#logo img{
+    height:5.75rem;
+    margin: 0.3125rem;;
+}
+/********************************************************************************************************/
+
+/*welcome section*/
+#home{
+    text-align: center;
+    background-color:rgba(0,0,255,0.1);
+}
+#home button{
+    padding: 0.3125rem 1.25rem;
+    margin:0.937rem;
+    border-style:solid;
+    border-radius:0.625rem;
+    border-color: orange;
+    background-color: rgb(229, 248, 228);
+    cursor: pointer;
+    font-size: 1.3rem;
+    color:orange;
+}
+/*background  color of home or if i ant to set an background image with opacity to image only*/
+/*#home::before{
+    content:"";
+    position:absolute;      
+    height:100%;
+    width:100%;
+    background-color:blue;
+
+    opacity: 0.4;
+    z-index:-1;
+}
+#home{
+    position:relative;
+}*/
+
+/****************************************************************************************************************************/
+
+
+/*services*/
+.services-container{
+    background-color:rgb(237, 238, 228);
+}
+
+#services{
+    display:flex;
+}
+#services .box{
+    border-style:solid;
+    padding:0.0625rem;
+    margin:5rem;
+    margin-top: 0.625rem;
+    border-radius: 0.625rem;
+    border-color: red;
+    background-color: rgb(247, 236, 236);
+}
+#services .box img{
+    height:10rem; 
+    margin:auto;
+    display: block;
+    margin-top:0.3125rem;
+}
+
+/********************************************************************************************************************************************/
+
+/*clients;*/
+#clients{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item img{
+    height:6.25rem;
+    padding:0.625rem; 
+}
+
+#client-section::before{
+    content:"";
+    position:absolute;
+    height: 100%;
+    width:100%;
+    background-image: url("../Images/texture.jpg");
+    opacity: 0.5;
+    z-index:-1;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#client-section{
+    position:relative;
+}
+/*******************************************************************************************************************************************/
+
+
+footer{
+    text-align: center;
+    color:white;
+    background-color: black;
+    padding:0.125rem;
+}
+
+
+/**utility classes*/
+.h-primary{
+    font-size: 3.8rem;
+
+}
+.h-secondary{
+    font-size: 3rem;
+}
+.center{
+    text-align: center;
+}
+
+@media screen and (max-width:1110px){
+    #nav-bar{
+      overflow:hidden;
+      display:block;
+    }
+    #nav-bar ul li a{
+        padding:0.625rem;
+        font-size: 1.1rem;
+        margin:0px;
+    }
+    #logo img{
+        height:2.5rem;
+        margin: 0.2rem;;
+    }
+
+    #services{
+        flex-direction: column;
+    }
+    #services .box{
+        padding:0.0625rem;
+        margin:1rem;
+        margin-top: 0.625rem; 
+    }
+
+
+    #clients{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .client-item img{
+        height:3.2rem;
+        padding:0.5rem; 
+    }
+   
+    .h-primary{
+        font-size: 2rem;
+    }
+    .h-secondary{
+        font-size: 1.5rem;
+    }
+}
+
+
+/***************************************************LOgin page**********************************************************************/
+.login {
+    background-color: rgb(219, 225, 193);
+    background-image: url("Images/login.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y:rem;
+    background-size: 15rem;
+}
+#page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+#page input{
+    width:90%;
+    border-style:ridge;
+    border-radius:0.5625rem;
+    background-color: rgb(236, 240, 243);
+    padding:0.3125rem;
+    margin-bottom:0.3125rem;
+}
+
+/********************************************contact us page ************************************************************************/
+
+.contactus{
+    background-color: bisque;
+    background-image: url("Images/contactus.webp");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-attachment: fixed;
+    background-position-y: top;
+    background-clip:border-box;
+    background-size: 11rem;
+   
+}
+
+.contact{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.contact form input,textarea{
+    width:90%;
+    border-style:ridge;
+    border-radius:0.5625rem;
+    background-color: rgb(236, 240, 243);
+    padding:0.3125rem;
+    margin-bottom:0.3125rem;
+}
